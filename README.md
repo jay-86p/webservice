@@ -8,12 +8,20 @@
 
 ### WebService Configuration
 
-* Refer to the [webhooks](https://developer.github.com/webhooks/) documentation on how to [Create Webhooks](https://developer.github.com/webhooks/creating/) in an organization and [Configure Your Server](https://developer.github.com/webhooks/configuring/).
+* Refer to the [webhooks](https://developer.github.com/webhooks/) documentation on how to [Create Webhooks](https://developer.github.com/webhooks/creating/) in an organization.
+* [Configure a Sinatra Server](https://developer.github.com/webhooks/configuring/) to handle the incoming payloads from the webhooks.
 
+#### Build & Run Procedure:
+
+* Install ruby
+* Install gem
+* Install bundler
+* Run 'bundle install'
 * Set the following required environment variables:
     - `USERNAME` - GitHub Username
-    - `API_TOKEN` - a [Personal Access Token](https://help.github.com/enterprise/user/articles/creating-a-personal-access-token-for-the-command-line/) that has the ability to create an issue in the notification repository
-    - `NOTIFICATION_REPO` - the repository in which to create the notification issue. e.g. github.example.com/organization/custom-notifications
+    - `API_TOKEN` - A [Personal Access Token](https://help.github.com/enterprise/user/articles/creating-a-personal-access-token-for-the-command-line/) that has the ability to create an issue in the notification repository
+    - `NOTIFICATION_REPO` - The repository in which to create the notification issue. e.g. github.example.com/organization/custom-notifications
+* Run 'ruby app.rb'    
 
 ### Development References
 
